@@ -36,6 +36,7 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             Move();
+            Debug.Log(transform.position);
             timer = 0;
         }
     }
