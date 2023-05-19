@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed = 10;
+    public int health;
+    AudioSource deathSound;
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = 5;
+        deathSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,7 +38,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("You Diedded!");
+        Debug.Log("You took damage!" + health);
+        health--;
+
+        if (health == 0)
+        {
+            Debug.Log("You Died!");
+            deathSound.Play();
+
+        }
+
     }
 
 }
