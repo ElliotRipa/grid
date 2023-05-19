@@ -27,7 +27,7 @@ public class CatSpawnerScript : MonoBehaviour
         else
         {
             Instantiate(cat, transform.position, Quaternion.identity);
-            Debug.Log(transform.position);
+            // Debug.Log(transform.position);
             timer = 0;
         }
         

@@ -21,10 +21,10 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("HeartPlayer");
-        Debug.Log("Player found at " + player.name);
+        // Debug.Log("Player found at " + player.name);
 
         Quaternion angle = AngleToPlayer(player);
-        Debug.Log(angle);
+        // Debug.Log(angle);
 
         transform.transform.rotation = angle;
 
